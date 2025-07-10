@@ -10,6 +10,7 @@ export default function Button(props) {
           background: 'var(--purpure-gradient)',
           color: 'white',
           boxShadow: '2px 2px 10px #a3a3a3',
+          border: 'none',
         }
       }
     />

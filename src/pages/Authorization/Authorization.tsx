@@ -1,7 +1,8 @@
+import { useParams } from 'react-router';
+import { Typography } from 'antd';
+import '@/pages/Authorization/Authorization.css';
 import LoginForm from '@/components/LoginForm/LoginForm';
 import RegistrationForm from '@/components/RegistrationForm/RegistrationForm';
-import '@/pages/Authorization/Authorization.css';
-import { Typography } from 'antd';
 
 export interface AuthProps {
   isSignIn: boolean;
@@ -9,7 +10,13 @@ export interface AuthProps {
 }
 
 export default function Authorization({ isSignIn, toggleForm }: AuthProps) {
-  const toggleTitle = isSignIn ? 'Sign Up' : 'Sign In';
+  const params = useParams();
+
+  const isRegistration =
+    params['isRegistration'] === '1' ? !isSignIn : isSignIn;
+
+  const toggleTitle = isRegistration ? 'Sign Up' : 'Sign In';
+
   return (
     <div className="auth-window">
       <LoginForm />
@@ -17,7 +24,7 @@ export default function Authorization({ isSignIn, toggleForm }: AuthProps) {
       <div
         className="auth-toggle"
         style={{
-          right: isSignIn ? '0' : '50%',
+          right: isRegistration ? '0' : '50%',
         }}
         onClick={toggleForm}
       >

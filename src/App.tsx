@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
-import Authorization from '@/pages/Authorization/Authorization';
-import Main from '@/pages/Main/Main';
+import { BrowserRouter } from 'react-router';
+import AppRouters from './appRouters/AppRouters';
 import { type ICard } from '@/components/Card/Card';
 import '@/App.css';
 
@@ -44,18 +44,21 @@ function App() {
   };
 
   return (
-    <div className="app-window-container">
-      <Authorization isSignIn={isSignIn} toggleForm={toggleForm} />
-      {/* <Main
-        activeTab={activeTab}
-        changeActiveTab={changeActiveTab}
-        cash={cash}
-        currentDate={currentDate}
-        cards={cards}
-        addToCart={addToCart}
-        buyCards={buyCards}
-      /> */}
-    </div>
+    <BrowserRouter>
+      <div className="app-window-container">
+        <AppRouters
+          isSignIn={isSignIn}
+          toggleForm={toggleForm}
+          activeTab={activeTab}
+          changeActiveTab={changeActiveTab}
+          cash={cash}
+          currentDate={currentDate}
+          cards={cards}
+          addToCart={addToCart}
+          buyCards={buyCards}
+        />
+      </div>
+    </BrowserRouter>
   );
 }
 

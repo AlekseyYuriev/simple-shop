@@ -1,8 +1,9 @@
 :root {
-  font-family: "Avenir", GadGet, sans-serif;
+  font-family: 'Avenir', GadGet, sans-serif;
   --yellow-gradient: linear-gradient(to right, #ffbc3b, #ffcf7b);
   --orange-gradient: linear-gradient(to right, #ff864c, #f2a276);
   --violet-gradient: linear-gradient(to right, #9e6aff, #c7acfb);
+  --overview-gradient: linear-gradient(to right, #af0ca9, #410bca);
   --purpure-gradient: linear-gradient(to right, #8d70ee, #4d9fca);
   --red-gradient: linear-gradient(to right, #e4334d, #e4687a);
   --gray: #e0e0e0;

@@ -1,4 +1,5 @@
 import { Form, FormProps } from 'antd';
+import { NavLink } from 'react-router';
 import Button from '@/components/Button/Button';
 import Input from '@/components/Input/Input';
 import '@/components/LoginForm/LoginForm.css';
@@ -50,7 +51,9 @@ export default function LoginForm() {
         </Form.Item>
 
         <Form.Item label={null} style={{ margin: 'auto' }}>
-          <Button htmlType="submit">Sign In</Button>
+          <NavLink to={'/main'}>
+            <Button htmlType="submit">Sign In</Button>
+          </NavLink>
         </Form.Item>
       </Form>
     </div>
