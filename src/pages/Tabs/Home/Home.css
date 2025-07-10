@@ -1,0 +1,11 @@
+.home-container {
+  display: flex;
+  gap: 1em;
+  height: 100%;
+}
+
+.home-container-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
