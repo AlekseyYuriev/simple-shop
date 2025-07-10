@@ -4,6 +4,7 @@
   --orange-gradient: linear-gradient(to right, #ff864c, #f2a276);
   --violet-gradient: linear-gradient(to right, #9e6aff, #c7acfb);
   --overview-gradient: linear-gradient(to right, #af0ca9, #410bca);
+  --overview-gradient-dark: linear-gradient(to right, #4a1f49, #311d63);
   --purpure-gradient: linear-gradient(to right, #8d70ee, #4d9fca);
   --red-gradient: linear-gradient(to right, #e4334d, #e4687a);
   --gray: #e0e0e0;

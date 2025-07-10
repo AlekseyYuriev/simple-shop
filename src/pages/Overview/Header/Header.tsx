@@ -1,16 +1,18 @@
 import { NavLink } from 'react-router';
 import Button from '@/components/Button/Button';
-import '@/pages/Overview/Header/Header.css';
+import Styled from '@/pages/Overview/Header/Header.styled';
+
+const { Container } = Styled;
 
 export default function Header() {
   return (
-    <div className="overview-header-container">
+    <Container color="white">
       <NavLink to={'/auth/0'} end>
         <Button>Sign In</Button>
       </NavLink>
       <NavLink to={'/auth/1'} end>
         <Button>Registration</Button>
       </NavLink>
-    </div>
+    </Container>
   );
 }

@@ -1,6 +1,9 @@
 import { Button as AntdButton } from 'antd';
+import type { ComponentProps } from 'react';
 
-export default function Button(props) {
+type AntdButtonProps = ComponentProps<typeof AntdButton>;
+
+export default function Button(props: AntdButtonProps) {
   return (
     <AntdButton
       {...props}

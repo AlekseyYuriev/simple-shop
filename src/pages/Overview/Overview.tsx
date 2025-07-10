@@ -1,10 +1,10 @@
 import Header from '@/pages/Overview/Header/Header';
-import '@/pages/Overview/Overview.css';
+import Styled from '@/pages/Overview/Overview.styled';
 
 export default function Overview() {
   return (
-    <div className="overview-container">
+    <Styled.Container>
       <Header />
-    </div>
+    </Styled.Container>
   );
 }

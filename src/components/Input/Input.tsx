@@ -1,6 +1,9 @@
 import { Input as AntdInput } from 'antd';
+import type { ComponentProps } from 'react';
 
-export default function Input(props) {
+type AntdInputProps = ComponentProps<typeof AntdInput>;
+
+export default function Input(props: AntdInputProps) {
   return (
     <AntdInput
       {...props}

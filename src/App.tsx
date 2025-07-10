@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { BrowserRouter } from 'react-router';
+import { ThemeProvider } from 'styled-components';
 import AppRouters from './appRouters/AppRouters';
 import { type ICard } from '@/components/Card/Card';
 import '@/App.css';
@@ -45,19 +46,25 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="app-window-container">
-        <AppRouters
-          isSignIn={isSignIn}
-          toggleForm={toggleForm}
-          activeTab={activeTab}
-          changeActiveTab={changeActiveTab}
-          cash={cash}
-          currentDate={currentDate}
-          cards={cards}
-          addToCart={addToCart}
-          buyCards={buyCards}
-        />
-      </div>
+      <ThemeProvider
+        theme={{
+          isDarkTheme: false,
+        }}
+      >
+        <div className="app-window-container">
+          <AppRouters
+            isSignIn={isSignIn}
+            toggleForm={toggleForm}
+            activeTab={activeTab}
+            changeActiveTab={changeActiveTab}
+            cash={cash}
+            currentDate={currentDate}
+            cards={cards}
+            addToCart={addToCart}
+            buyCards={buyCards}
+          />
+        </div>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
